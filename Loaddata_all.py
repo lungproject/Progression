@@ -29,21 +29,3 @@ def load_alldata(): #ct window
 
     return datatrain,labeltrain,datatest,labeltest
 
-
-def load_yidadata(): #ct window
-     
-    img = np.load("./alldata/yidadata_128.npy") #Deeplearningallpatchsmalls  3part3
-    data = np.asarray(img,dtype="float32")
-
-    
-    img = np.load("./alldata/yidalabels.npy")
-    label = np.asarray(img,dtype="float32")
-
-
-    
-    
-    data= np.expand_dims(data, axis=3)
- 
-
-    return data,label 
-  

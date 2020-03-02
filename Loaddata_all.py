@@ -9,19 +9,19 @@ from scipy.io import loadmat
 
 def load_alldata(): #ct window
      
-    img = np.load("./alldata/xptrain_128.npy") #Deeplearningallpatchsmalls  3part3
+    img = np.load("./alldata/smallxptrain_128.npy") #Deeplearningallpatchsmalls  3part3
     datatrain = np.asarray(img,dtype="float32")
 
     
-    img = np.load("./alldata/yptrain.npy")
+    img = np.load("./alldata/smallyptrain.npy")
     labeltrain = np.asarray(img,dtype="float32")
 
 
-    img = np.load("./alldata/xptest_128.npy") #Deeplearningallpatchsmalls  3part3
+    img = np.load("./alldata/smallxptest_128.npy") #Deeplearningallpatchsmalls  3part3
     datatest = np.asarray(img,dtype="float32")
 
     
-    img = np.load("./alldata/yptest.npy")
+    img = np.load("./alldata/smallyptest.npy")
     labeltest = np.asarray(img,dtype="float32")
     
     datatrain = np.expand_dims(datatrain, axis=3)

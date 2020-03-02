@@ -21,7 +21,7 @@ from sklearn.cross_validation import StratifiedKFold
 
 from keras import backend as K
 
-from Loaddata_all import load_alldata,load_yidadata
+from Loaddata_all import load_alldata
 from keras.models import load_model
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -60,10 +60,6 @@ predicttrain = model.predict(x_train, verbose=1)#ADCdata1,,xfuse_train
 np.savetxt("./Results/predicttrain.txt",predicttrain)
 
 
-
-x_val ,y_val  = load_yidadata()#load_data(count)
-predictval= model.predict(x_val, verbose=1)#ADCdata2,,xfuse_test
-np.savetxt("./Results/predictval.txt",predictval)
 
 
 # model2 = Model(inputs=model.input,
